@@ -26,22 +26,26 @@ GalleryAll.addEventListener('click', displayImage);
 let instance;
 function displayImage(e) {
   e.preventDefault();
-   if (e.target.nodeName !== "IMG") { return };
-   const url = e.target.dataset.source;
-   console.dir(url);
+  if (e.target.nodeName !== "IMG") { return };
+  const url = e.target.dataset.source;
+  console.dir(url);
 
-   instance = basicLightbox.create(`
+  instance = basicLightbox.create(`
   <img
   src="${url}"
   width="800"
   height="600">`).show();
-  
 }
-//     document.addEventListener('keydown', onModalCloseToEscape); 
-// function onModalCloseToEscape(e) {
-//   if (e.code === "Escape") {
-//     instance.close();
-//     document.removeEventListener("keydown", onModalCloseToEscape);
 
-//   }
-// }
+  // GalleryAll.addEventListener('keydown', onModalCloseToEscape);
+  // function onModalCloseToEscape(e) {
+    
+  //   if (e.code === "Escape") {
+  //     instance.close();
+  //     // GalleryAll.removeEventListener("keydown", onModalCloseToEscape);
+
+  //   }
+  // }
+
+
+   
